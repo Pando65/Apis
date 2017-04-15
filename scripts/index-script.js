@@ -3,7 +3,7 @@ $(document).on('ready', function(){
     $("#learnBtn").on('click', function() {
         $("#learnBtn").addClass('fadeOutRight');
         $(".row").fadeOut('slow', function(){
-            window.location.replace("learn.html")
+            window.location.replace("learn.php")
         });
     });
     
@@ -11,7 +11,7 @@ $(document).on('ready', function(){
     $("#exploreBtn").on('click', function() {
         $("#exploreBtn").addClass('fadeOutRight');
         $(".row").fadeOut('slow', function(){
-            window.location.replace("explore.html")
+            window.location.replace("explore.php")
         });
     });
     
@@ -19,7 +19,7 @@ $(document).on('ready', function(){
     $("#evaluateBtn").on('click', function() {
         $("#evaluateBtn").addClass('fadeOutRight');
         $(".row").fadeOut('slow', function(){
-            window.location.replace("evaluate.html")
+            window.location.replace("evaluate.php")
         });
     });    
     

@@ -25,9 +25,9 @@
             <a href="index.html" class="brand-logo">Proyecto Quimica</a>
             <ul id="nav-mobile" class="right hide-on-med-and-down">
                 <li class="active"><a href="learn.html">Aprende</a></li>
-                <li><a href="explore.html">Explora</a></li>
-                <li><a href="evaluate.html">Evalua</a></li>
-                <li><a href="team.html">Equipo</a></li>
+                <li><a href="explore.php">Explora</a></li>
+                <li><a href="evaluate.php">Evalua</a></li>
+                <li><a href="team.php">Equipo</a></li>
             </ul>
         </div>
     </nav>

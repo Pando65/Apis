@@ -13,7 +13,7 @@
     <!--  CSS propio  -->
     <link rel="stylesheet" type="text/css" href="./styles/styles.css">
     <!--  JS propio  -->
-    <script src="scripts/evaluate-script.js" type="text/javascript"> </script>
+    <script src="scripts/explore-script.js" type="text/javascript"> </script>
     <!-- Acentos -->
     <meta charset="utf-8">    
     <title>APIS Quimica</title>
@@ -24,28 +24,17 @@
         <div class="nav-wrapper light-green lighten-1">
             <a href="index.html" class="brand-logo">Proyecto Quimica</a>
             <ul id="nav-mobile" class="right hide-on-med-and-down">
-                <li><a href="learn.html">Aprende</a></li>
-                <li><a href="explore.html">Explora</a></li>
-                <li class="active"><a href="evaluate.html">Evalua</a></li>
-                <li><a href="team.html">Equipo</a></li>
+                <li><a href="learn.php">Aprende</a></li>
+                <li class="active"><a href="explore.php">Explora</a></li>
+                <li><a href="evaluate.php">Evalua</a></li>
+                <li><a href="team.php">Equipo</a></li>
             </ul>
         </div>
     </nav>
     <br>
     
     <div class="container center-align animated fadeInLeft">
-          <div class="card hoverable">
-            <div class="card-content">
-              <span class="card-title">Pregunta 1</span>
-              <p>¿Qué son los acidos grasos?</p>
-            </div>
-            <div class="card-action">
-              <a href="#">Respuesta A</a> <br>
-              <a href="#">Respuesta B</a> <br>
-              <a href="#">Respuesta C</a> <br>
-              <a href="#">Respuesta D</a> <br>
-            </div>
-          </div>
+        <img src="images/grasos.jpg"/>
     </div>
     
 </body>
