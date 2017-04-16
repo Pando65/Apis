@@ -4,7 +4,7 @@ $page = 'learn';
 include "header.php";
 ?>
     
-    <div class="container animated fadeInLeft">
+    <div id="contenedor" class="container animated fadeInLeft">
     <ul class="collapsible" data-collapsible="expandable">
         <li>
           <div class="collapsible-header"><i class="material-icons">filter_drama</i>Subtema Química 1</div>
