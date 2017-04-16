@@ -78,7 +78,7 @@
         }
         else if ($page === 'learn') {
         ?>
-                <li class="active"><a href="learn.html">Aprende</a></li>
+                <li class="active"><a href="learn.php">Aprende</a></li>
                 <li><a href="explore.php">Explora</a></li>
                 <li><a href="evaluate.php">Evalua</a></li>
                 <li><a href="team.php">Equipo</a></li>
