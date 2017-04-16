@@ -47,54 +47,56 @@
 </head>
 
 <body>
-    <nav>
-        <div class="nav-wrapper light-green lighten-1">
-            <a href="index.html" class="brand-logo">Proyecto Quimica</a>
-            <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <?php
-        if ($page === 'index') {
-        ?>
-                <li><a href="learn.php">Aprende</a></li>
-                <li><a href="explore.php">Explora</a></li>
-                <li><a href="evaluate.php">Evalua</a></li>
-                <li><a href="team.php">Equipo</a></li>
-        <?php
-        }
-        else if ($page === 'evaluate') {
-        ?>
-                <li><a href="learn.php">Aprende</a></li>
-                <li><a href="explore.php">Explora</a></li>
-                <li class="active"><a href="evaluate.php">Evalua</a></li>
-                <li><a href="team.php">Equipo</a></li>
-        <?php
-        }
-        else if ($page === 'explore') {
-        ?>
-                <li><a href="learn.php">Aprende</a></li>
-                <li class="active"><a href="explore.php">Explora</a></li>
-                <li><a href="evaluate.php">Evalua</a></li>
-                <li><a href="team.php">Equipo</a></li>
-        <?php
-        }
-        else if ($page === 'learn') {
-        ?>
-                <li class="active"><a href="learn.php">Aprende</a></li>
-                <li><a href="explore.php">Explora</a></li>
-                <li><a href="evaluate.php">Evalua</a></li>
-                <li><a href="team.php">Equipo</a></li>
-        <?php
-        }
-        else if ($page === 'team') {
-        ?>
-                <li><a href="learn.html">Aprende</a></li>
-                <li><a href="explore.php">Explora</a></li>
-                <li><a href="evaluate.php">Evalua</a></li>
-                <li class="active"><a href="team.php">Equipo</a></li>
-        <?php
-        }
-        ?>
-                
-            </ul>
-        </div>
-    </nav>
+  <div class="navbar-fixed">
+      <nav>
+          <div class="nav-wrapper teal darken-2">
+              <a href="index.php" class="brand-logo">Proyecto Quimica</a>
+              <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <?php
+          if ($page === 'index') {
+          ?>
+                  <li><a href="learn.php">Aprende</a></li>
+                  <li><a href="explore.php">Explora</a></li>
+                  <li><a href="evaluate.php">Evalua</a></li>
+                  <li><a href="team.php">Equipo</a></li>
+          <?php
+          }
+          else if ($page === 'evaluate') {
+          ?>
+                  <li><a href="learn.php">Aprende</a></li>
+                  <li><a href="explore.php">Explora</a></li>
+                  <li class="active"><a href="evaluate.php">Evalua</a></li>
+                  <li><a href="team.php">Equipo</a></li>
+          <?php
+          }
+          else if ($page === 'explore') {
+          ?>
+                  <li><a href="learn.php">Aprende</a></li>
+                  <li class="active"><a href="explore.php">Explora</a></li>
+                  <li><a href="evaluate.php">Evalua</a></li>
+                  <li><a href="team.php">Equipo</a></li>
+          <?php
+          }
+          else if ($page === 'learn') {
+          ?>
+                  <li class="active"><a href="learn.php">Aprende</a></li>
+                  <li><a href="explore.php">Explora</a></li>
+                  <li><a href="evaluate.php">Evalua</a></li>
+                  <li><a href="team.php">Equipo</a></li>
+          <?php
+          }
+          else if ($page === 'team') {
+          ?>
+                  <li><a href="learn.php">Aprende</a></li>
+                  <li><a href="explore.php">Explora</a></li>
+                  <li><a href="evaluate.php">Evalua</a></li>
+                  <li class="active"><a href="team.php">Equipo</a></li>
+          <?php
+          }
+          ?>
+
+              </ul>
+          </div>
+      </nav>
+    </div>
     <br>

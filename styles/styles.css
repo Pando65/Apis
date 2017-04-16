@@ -6,3 +6,20 @@
     margin: auto !important;
     width: 30% !important;
 }
+
+#evaluateBtn, #learnBtn, #exploreBtn {
+  color: floralwhite;
+}
+
+.nav-wrapper a {
+  color: floralwhite;
+}
+
+body {
+  background-color: floralwhite;
+}
+
+#logo {
+  padding-top: 5%;
+  padding-bottom: 4%;
+}
