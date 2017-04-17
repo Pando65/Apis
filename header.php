@@ -1,7 +1,9 @@
 <html>    
 <head>
     <!--  JQuery  -->
-    <script src="scripts/jquery.js" type="text/javascript"> </script>    
+    <script src="scripts/jquery.js" type="text/javascript"> </script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.0.min.js"></script>
+    <script src="http://ajax.aspnetcdn.com/ajax/jquery.ui/1.8.22/jquery-ui.js"></script>
     <!-- Materialize -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/css/materialize.min.css">
     <!-- Iconos -->

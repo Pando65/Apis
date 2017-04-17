@@ -1,4 +1,4 @@
-$(document).on('ready', function(){
+$(document).ready(function(){
     // Transition to learn view
     $("#learnBtn").on('click', function() {
         $("#learnBtn").addClass('fadeOutRight');
