@@ -8,18 +8,26 @@
 }
 
 #evaluateBtn, #learnBtn, #exploreBtn {
-  color: floralwhite;
+    color: floralwhite;
 }
 
 .nav-wrapper a {
-  color: floralwhite;
+    color: floralwhite;
 }
 
 body {
-  background-color: floralwhite;
+    background-color: floralwhite;
 }
 
 #logo {
-  padding-top: 5%;
-  padding-bottom: 4%;
+    padding-top: 5%;
+    padding-bottom: 4%;
+}
+
+.hoverable {
+    cursor: pointer;
+}
+
+.card {
+    margin: 0 !important;
 }

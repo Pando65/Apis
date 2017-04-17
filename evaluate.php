@@ -5,17 +5,50 @@ include "header.php";
 ?>
     
     <div class="container center-align animated fadeInLeft">
-          <div class="card hoverable">
+        
+          <div class="card">
             <div class="card-content">
-              <span class="card-title">Pregunta 1</span>
-              <p>¿Qué son los acidos grasos?</p>
+                <div class="card-image"></div>
+                <span class="card-title">¿Qué son los acidos grasos?</span>
+                <div class="divider"></div>
+                <br>
+                <div class="row">
+                    <div class="card col s12 hoverable">
+                        <div class="card-image"></div>
+                        <div class="card-content">
+                            Respuesta 1
+                        </div>
+                    </div>                   
+                </div>
+                
+                <div class="row" style="background-color:blue">
+                    <div class="card col s12 hoverable">
+                        <div class="card-image"></div>
+                        <div class="card-content">
+                            Respuesta 2
+                        </div>
+                    </div>                   
+                </div>
+                
+                <div class="row">
+                    <div class="card col s12 hoverable">
+                        <div class="card-image"></div>
+                        <div class="card-content">
+                            Respuesta 3
+                        </div>
+                    </div>                   
+                </div>
+                
+                <div class="row">
+                    <div class="card col s12 hoverable">
+                        <div class="card-image"></div>
+                        <div class="card-content">
+                            Respuesta 4
+                        </div>
+                    </div>                   
+                </div>                
             </div>
-            <div class="card-action">
-              <a href="#">Respuesta A</a> <br>
-              <a href="#">Respuesta B</a> <br>
-              <a href="#">Respuesta C</a> <br>
-              <a href="#">Respuesta D</a> <br>
-            </div>
+            
           </div>
     </div>
     
