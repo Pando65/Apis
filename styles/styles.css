@@ -31,3 +31,8 @@ body {
 .card {
     margin: 0 !important;
 }
+
+#exploreBtn, #learnBtn, #evaluateBtn, .container {
+    -webkit-animation-duration: .8s;
+    -webkit-animation-delay: 0s;
+}

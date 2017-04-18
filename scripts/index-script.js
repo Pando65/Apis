@@ -1,7 +1,8 @@
 $(document).ready(function(){
+    //esto se puede refactorizar, despues intento hacerlo
     // Transition to learn view
     $("#learnBtn").on('click', function() {
-        $("#learnBtn").addClass('fadeOutRight');
+        $("#learnBtn").addClass('animated fadeOutRight');
         $(".row").fadeOut('slow', function(){
             window.location.replace("learn.php")
         });
@@ -9,7 +10,7 @@ $(document).ready(function(){
     
     // Transition to explore view
     $("#exploreBtn").on('click', function() {
-        $("#exploreBtn").addClass('fadeOutRight');
+        $("#exploreBtn").addClass('animated fadeOutRight');
         $(".row").fadeOut('slow', function(){
             window.location.replace("explore.php")
         });
@@ -17,11 +18,9 @@ $(document).ready(function(){
     
     // Transition to evaluate view
     $("#evaluateBtn").on('click', function() {
-        $("#evaluateBtn").addClass('fadeOutRight');
+        $("#evaluateBtn").addClass('animated fadeOutRight');
         $(".row").fadeOut('slow', function(){
             window.location.replace("evaluate.php")
         });
-    });    
-    
-    
+    }); 
 });

@@ -15,6 +15,7 @@
     <!--  CSS propio  -->
     <link rel="stylesheet" type="text/css" href="./styles/styles.css">
     <!--  JS propio  -->
+    <script src="scripts/transitions.js" type="text/javascript"> </script>
     <?php
     if ($page === 'index') {
     ?>
