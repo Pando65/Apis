@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost
--- Tiempo de generación: 19-04-2017 a las 21:40:56
+-- Tiempo de generación: 20-04-2017 a las 00:40:20
 -- Versión del servidor: 5.6.28
 -- Versión de PHP: 7.0.10
 
@@ -22,7 +22,7 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `Answer` (
   `id` int(11) NOT NULL,
-  `answer_text` varchar(60) DEFAULT NULL,
+  `answer_text` varchar(150) DEFAULT NULL,
   `answer_img` varchar(35) DEFAULT NULL,
   `id_question` int(11) NOT NULL,
   `correct` varchar(1) NOT NULL DEFAULT '0'
@@ -36,9 +36,16 @@ CREATE TABLE `Answer` (
 
 CREATE TABLE `Question` (
   `id` int(11) NOT NULL,
-  `question_text` varchar(60) DEFAULT NULL,
+  `question_text` varchar(150) DEFAULT NULL,
   `question_img` varchar(35) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Volcado de datos para la tabla `Question`
+--
+
+INSERT INTO `Question` (`id`, `question_text`, `question_img`) VALUES
+(1, 'Al hidrogenar una molécula, está todavía contiene dos dobles enlaces. Esta reacción fue de:', NULL);
 
 --
 -- Índices para tablas volcadas
@@ -55,7 +62,8 @@ ALTER TABLE `Answer`
 -- Indices de la tabla `Question`
 --
 ALTER TABLE `Question`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `id` (`id`);
 
 --
 -- AUTO_INCREMENT de las tablas volcadas
@@ -70,7 +78,7 @@ ALTER TABLE `Answer`
 -- AUTO_INCREMENT de la tabla `Question`
 --
 ALTER TABLE `Question`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- Restricciones para tablas volcadas
 --
