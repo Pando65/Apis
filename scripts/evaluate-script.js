@@ -8,7 +8,8 @@ $(document).ready(function() {
         data: {"action": "GET-QUESTIONS"},
         headers: {'Content-Type': 'application/x-www-form-urlencoded'},
         success: function (data) {
-            alert("ok");
+            alert(data.response[0].question_text);
+            alert(data.response[0].ans[0].id);
         },
         error: function (data) {
             alert("up");

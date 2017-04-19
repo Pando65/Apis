@@ -15,13 +15,23 @@ function isThereConnection() {
 
 function getQuestionsDB() {
     $conn = connection();
-    $sql = "SELECT * FROM Question";
-    if ($result = mysqli_query($conn, $sql)) {
+    $sql_question = "SELECT * FROM question";
+    if ($questions = mysqli_query($conn, $sql_question)) {
         $response = array();
-        if($result->num_rows > 0) {
-            while ($row = mysqli_fetch_assoc($result)) {
-                array_push($response, $row);
+        while ($q = $questions->fetch_assoc()) {
+            // For each question, I will retrieve their answers.
+            $sql_answer = "SELECT * FROM answer WHERE id_question = " . $q['id'];
+            if ($answers = mysqli_query($conn, $sql_answer)) {
+                $answers_array = array();
+                while ($a = $answers->fetch_assoc()) {
+                    array_push($answers_array, $a);
+                }
+                $q["ans"] = $answers_array;
             }
+            else {
+                return null;
+            }
+            array_push($response, $q);
         }
         return $response;
     }
