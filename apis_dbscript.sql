@@ -17,12 +17,12 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `Answer`
+-- Estructura de tabla para la tabla `answer`
 --
 
-CREATE TABLE `Answer` (
+CREATE TABLE `answer` (
   `id` int(11) NOT NULL,
-  `answer_text` varchar(150) DEFAULT NULL,
+  `answer_text` TEXT DEFAULT NULL,
   `answer_img` varchar(35) DEFAULT NULL,
   `id_question` int(11) NOT NULL,
   `correct` varchar(1) NOT NULL DEFAULT '0'
@@ -31,20 +31,20 @@ CREATE TABLE `Answer` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `Question`
+-- Estructura de tabla para la tabla `question`
 --
 
-CREATE TABLE `Question` (
+CREATE TABLE `question` (
   `id` int(11) NOT NULL,
-  `question_text` varchar(150) DEFAULT NULL,
+  `question_text` TEXT DEFAULT NULL,
   `question_img` varchar(35) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Volcado de datos para la tabla `Question`
+-- Volcado de datos para la tabla `question`
 --
 
-INSERT INTO `Question` (`id`, `question_text`, `question_img`) VALUES
+INSERT INTO `question` (`id`, `question_text`, `question_img`) VALUES
 (1, 'Al hidrogenar una molécula, está todavía contiene dos dobles enlaces. Esta reacción fue de:', NULL);
 
 --
@@ -52,16 +52,16 @@ INSERT INTO `Question` (`id`, `question_text`, `question_img`) VALUES
 --
 
 --
--- Indices de la tabla `Answer`
+-- Indices de la tabla `answer`
 --
-ALTER TABLE `Answer`
+ALTER TABLE `answer`
   ADD PRIMARY KEY (`id`),
   ADD KEY `id_question` (`id_question`);
 
 --
--- Indices de la tabla `Question`
+-- Indices de la tabla `question`
 --
-ALTER TABLE `Question`
+ALTER TABLE `question`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `id` (`id`);
 
@@ -70,21 +70,21 @@ ALTER TABLE `Question`
 --
 
 --
--- AUTO_INCREMENT de la tabla `Answer`
+-- AUTO_INCREMENT de la tabla `answer`
 --
-ALTER TABLE `Answer`
+ALTER TABLE `answer`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 --
--- AUTO_INCREMENT de la tabla `Question`
+-- AUTO_INCREMENT de la tabla `question`
 --
-ALTER TABLE `Question`
+ALTER TABLE `question`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- Restricciones para tablas volcadas
 --
 
 --
--- Filtros para la tabla `Answer`
+-- Filtros para la tabla `answer`
 --
-ALTER TABLE `Answer`
-  ADD CONSTRAINT `answer_ibfk_1` FOREIGN KEY (`id_question`) REFERENCES `Question` (`id`);
+ALTER TABLE `answer`
+  ADD CONSTRAINT `answer_ibfk_1` FOREIGN KEY (`id_question`) REFERENCES `question` (`id`);
