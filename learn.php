@@ -1,32 +1,89 @@
 <?php
-$page = 'learn';
+  $page = 'learn';
 
-include "header.php";
-?>
-    
+  include "header.php";
+?>  
+    <div class="container animated fadeInLefT">
+      <h4>Teoría</h4>
+      <p>Estos son términos básicos que necesitas para aprovechar lo mas que puedas de nuestra aplicación.</p>
+    </div>
     <div id="contenedor" class="container animated fadeInLeft">
     <ul class="collapsible" data-collapsible="expandable">
         <li>
-          <div class="collapsible-header"><i class="material-icons">filter_drama</i>Subtema Química 1</div>
-          <div class="collapsible-body"><span>
+          <div class="collapsible-header"><i class="material-icons">opacity</i>Glicerol</div>
+          <div class="collapsible-body">
               <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum pretium tortor nibh. Sed gravida elit in ante scelerisque, et volutpat justo maximus. Cras tempor varius finibus. Sed nisi justo, hendrerit sed urna vitae, tincidunt congue felis. Quisque tincidunt porta tincidunt. Suspendisse vitae arcu felis. Nunc bibendum ultrices nunc non porta. Duis et nisl urna. Aliquam ipsum augue, lobortis vitae lacus non, dictum interdum eros. Donec eu pharetra nulla. Mauris id lacus efficitur, rutrum dui et, accumsan dui. Vestibulum eu risus aliquam neque facilisis elementum ac id orci. Aliquam metus mi, dapibus volutpat nibh nec, venenatis mollis felis. Sed lectus quam, rutrum eu dui non, maximus tempor ligula. Curabitur neque arcu, ullamcorper euismod diam quis, tempor convallis nisl.
+                  Molécula formada por tres átomos de carbono unidos con una molécula de alcohol (OH)  cada uno.
               </p>
-              <p>
-                  Maecenas vitae mauris vestibulum, dignissim eros eu, faucibus purus. Nullam vehicula arcu neque, eget tincidunt purus ultricies vitae. Nullam non quam vestibulum, pulvinar quam a, interdum ipsum. Nam feugiat congue nisl quis pulvinar. Sed in elit at magna feugiat sagittis. Curabitur nec fringilla metus. Quisque sit amet sagittis purus. Pellentesque tristique nisi quis magna vulputate elementum. In ut elit sit amet diam interdum cursus sit amet vitae dui. Vestibulum pretium pellentesque velit nec convallis. Fusce posuere orci odio, nec vestibulum lorem molestie ut. In in scelerisque neque. Interdum et malesuada fames ac ante ipsum primis in faucibus.              
-              </p>
-              </span></div>
+              <img src="images/glicerol.png" alt="Glicerol" height="138" width="320">
+              </div>
         </li>
         <li>
-          <div class="collapsible-header"><i class="material-icons">place</i>Subtema Química 2</div>
-          <div class="collapsible-body"><span><img src="images/play.png"</span> <p>¡Ve el video para concoer más!</p></div>
+          <div class="collapsible-header"><i class="material-icons">opacity</i>Ácidos grasos</div>
+          <div class="collapsible-body">
+            <p>Molécula de varios carbonos unidos con la posibilidad de tener dobles enlaces. Los ácidos grasos tienen un grupo -COOH en uno de sus extremos.</p>
+            <img src="images/acido_graso.png" alt="Acido graso" height="138" width="320">
+          </div>
         </li>
         <li>
-          <div class="collapsible-header"><i class="material-icons">whatshot</i>Subtema Química 3</div>
-          <div class="collapsible-body"><span>
+          <div class="collapsible-header"><i class="material-icons">opacity</i>Grasas</div>
+          <div class="collapsible-body">
               <p>
-              Maecenas vitae mauris vestibulum, dignissim eros eu, faucibus purus. Nullam vehicula arcu neque, eget tincidunt purus ultricies vitae. Nullam non quam vestibulum, pulvinar quam a, interdum ipsum. Nam feugiat congue nisl quis pulvinar. Sed in elit at magna feugiat sagittis. Curabitur nec fringilla metus. Quisque sit amet sagittis purus. Pellentesque tristique nisi quis magna vulputate elementum. In ut elit sit amet diam interdum cursus sit amet vitae dui. Vestibulum pretium pellentesque velit nec convallis. Fusce posuere orci odio, nec vestibulum lorem molestie ut. In in scelerisque neque. Interdum et malesuada fames ac ante ipsum primis in faucibus.
-              </p></span></div>
+                Las grasas son lípidos que son formados con un glicerol y tres ácidos grasos. Las grasas son moléculas muy utilizadas en la industria para una gran variedad de productos. Son sólidos a temperatura ambiente y cuentan con ácidos grasos más saturados que los aceites. 
+              </p>
+          </div>
+        </li>
+    
+        <li>
+          <div class="collapsible-header"><i class="material-icons">opacity</i>Aceites</div>
+          <div class="collapsible-body">
+              <p>
+                Son lípidos formados con un glicerol y tres ácidos grasos. Igual que las grasas, son usados para la fabricación de productos de uso diario. Son líquidos a temperatura ambiente y cuentan con ácidos grasos menos saturados que las grasas.
+              </p>
+          </div>
+        </li>
+      
+        <li>
+          <div class="collapsible-header"><i class="material-icons">info</i>Saturacion</div>
+          <div class="collapsible-body">
+              <p>
+                Cuando la molécula no tiene dobles o triples enlaces.
+              </p>
+          </div>
+        </li>
+      
+        <li>
+          <div class="collapsible-header"><i class="material-icons">info</i>Reacción</div>
+          <div class="collapsible-body">
+              <p>
+                Cuando una sustancia, a la que llamaremos reactivo, es convertida en una diferente, llamada producto. 
+              </p>
+          </div>
+        </li>
+      
+        <li>
+          <div class="collapsible-header"><i class="material-icons">info</i>Hidrogenación</div>
+          <div class="collapsible-body">
+              <p>
+                Un reacción que consiste en agregar hidrógenos a una molécula. 
+              </p>
+          </div>
+        </li>
+        <li>
+          <div class="collapsible-header"><i class="material-icons">info</i>Hidrogenación completa</div>
+          <div class="collapsible-body">
+              <p>
+                Reacción de hidrogenación que convierte todos los dobles y triples enlaces en sencillos
+              </p>
+          </div>
+        </li>
+        <li>
+          <div class="collapsible-header"><i class="material-icons">info</i>Hidrogenación parcial</div>
+          <div class="collapsible-body">
+              <p>
+                Reacción de hidrogenación que convierte los triples enlaces en dobles
+              </p>
+          </div>
         </li>
     </ul>
     </div>

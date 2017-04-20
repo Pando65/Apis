@@ -1,7 +1,7 @@
 <?php
-$page = 'explore';
+  $page = 'explore';
 
-include "header.php";
+  include "header.php";
 ?>
     <style>
     [draggable] {

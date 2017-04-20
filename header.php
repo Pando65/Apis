@@ -14,6 +14,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/js/materialize.min.js"></script>
     <!--  CSS propio  -->
     <link rel="stylesheet" type="text/css" href="./styles/styles.css">
+    <!-- Iconos IONICONS -->
+    <!--<link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">-->
     <!--  JS propio  -->
     <script src="scripts/transitions.js" type="text/javascript"> </script>
     <?php
