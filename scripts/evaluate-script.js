@@ -3,6 +3,8 @@ $(document).ready(function() {
     var qArray;
     var i = 0, correctAns = 0;
     
+    $("#over").hide();
+    
     function putQuestion() {
         var currentHTML = "";
         $(".card-title").html(qArray[i].question_text);
@@ -46,18 +48,20 @@ $(document).ready(function() {
     
     // Clicked an answer
     $("#answers").on("click", ".hoverable", function(){
+        var message = "Incorrecto :(";
         if (checkIfCorrect($(this).attr("id"))) {
             correctAns += 1;
-            alert("Correcto!");
+            message = "Correcto!";
+        }
+        alert(message);
+        
+        if (i < qArray.length) {
+            putQuestion();
         }
         else {
-            alert("Incorrecto :(");
-        }
-        if (i + 1 < qArray.length) {
-            //putQuestion(); lo comento porque ahorita namas hay una pregunta en bd
-        }
-        else {
-            //desplegar pagina de que ya acabo
+            $("#question").addClass('animated fadeOutRight').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
+                $("#over").show(); // deberia funcionar :(
+            });
         }
     });
 });
