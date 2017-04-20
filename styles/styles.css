@@ -36,3 +36,10 @@ body {
     -webkit-animation-duration: .8s;
     -webkit-animation-delay: 0s;
 }
+
+.collapsible-header {
+  background-color: #fefbfa;
+}
+.collapsible-body {
+  background-color: white;
+}
