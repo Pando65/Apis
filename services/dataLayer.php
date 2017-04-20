@@ -15,12 +15,12 @@ function isThereConnection() {
 
 function getQuestionsDB() {
     $conn = connection();
-    $sql_question = "SELECT * FROM question";
+    $sql_question = "SELECT * FROM question ORDER BY RAND()";
     if ($questions = mysqli_query($conn, $sql_question)) {
         $response = array();
         while ($q = $questions->fetch_assoc()) {
             // For each question, I will retrieve their answers.
-            $sql_answer = "SELECT * FROM answer WHERE id_question = " . $q['id'];
+            $sql_answer = "SELECT * FROM answer WHERE id_question = " . $q['id'] . " ORDER BY RAND()";
             if ($answers = mysqli_query($conn, $sql_answer)) {
                 $answers_array = array();
                 while ($a = $answers->fetch_assoc()) {
