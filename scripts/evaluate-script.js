@@ -2,7 +2,6 @@ $(document).ready(function() {
     
     var qArray;
     var i = 0, correctAns = 0;
-    
     $("#over").hide();
     
     function putQuestion() {
@@ -59,9 +58,14 @@ $(document).ready(function() {
             putQuestion();
         }
         else {
-            $("#question").addClass('animated fadeOutRight').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
-                $("#over").show(); // deberia funcionar :(
-            });
+            var message = " respuestas correctas de ";
+            if (correctAns == 1)
+                message = " respuesta correcta de "
+            $("#question").addClass('animated fadeOutRight');
+            $("#question").hide();
+            $("#score").html(correctAns + message + qArray.length + " totales");
+            $("#over").show();
+            $("#over").addClass('animated fadeInLeft');
         }
     });
 });

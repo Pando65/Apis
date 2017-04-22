@@ -15,9 +15,9 @@ include "header.php";
             </div>
         </div>
         
-        <div id="over">
-            <h3>¡Has terminado!</h3>
-            <h4>Tu puntaje: <span id="score"></span></h4>
+        <div id="over" class="">
+            <h3>¡Has terminado!</h3> <br>
+            <h4>Tu puntaje: <span id="score"></span></h4> <br>
             <h4>¡Sigue practicando!</h4>
         </div>
     </div>
