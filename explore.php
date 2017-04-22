@@ -23,11 +23,12 @@
     <div id="contenedor" draggable="true" class="container center-align animated fadeInLeft">
         <h2>Hidrogeniza las estructuras</h2>
     </div>
+    <br>
     <div id="chain1" class="container center-align animated fadeInLeft">
-        <span><img src="images/hidrogenado1.png"></span>
-        <span><img src="images/hidrogenado2.png"></span>
-        <span><img src="images/sinhidrogenar1.png"></span>
-        <span><img src="images/sinhidrogenar2.png"></span>
+        <span class="carbonos" id="c0"><img src="images/hidrogenado1.png"></span>
+        <span class="carbonos" id="c1"><img src="images/hidrogenado2.png"></span>
+        <span class="carbonos" id="c2"><img src="images/sinhidrogenar1.png"></span>
+        <span class="carbonos" id="c3"><img src="images/sinhidrogenar2.png"></span>
     </div>
     <div id="moleculas" class="left-align animated fadeInLeft" draggable="true">
         <span id="atomos"><img id="hidrogeno" src="images/hidrogeno.png" style="width: 15%; height: 20%"></span>
