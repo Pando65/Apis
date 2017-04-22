@@ -5,6 +5,9 @@ include "header.php";
 ?>
     
     <div class="container center-align animated fadeInLeft">
+        <div class="progress">
+            <div class="determinate" style="width: 0%"></div>
+        </div>
         <div class="card" id ="question">
             <div class="card-content">
                 <div class="card-image"></div>

@@ -16,6 +16,9 @@
     <link rel="stylesheet" type="text/css" href="./styles/styles.css">
     <!-- Iconos IONICONS -->
     <!--<link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">-->
+    <!-- Sweet alert  -->
+    <script src="scripts/sweetalert.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="styles/sweetalert.css">    
     <!--  JS propio  -->
     <script src="scripts/transitions.js" type="text/javascript"> </script>
     <?php

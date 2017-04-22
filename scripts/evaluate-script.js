@@ -1,7 +1,7 @@
 $(document).ready(function() {
     
     var qArray;
-    var i = 0, correctAns = 0;
+    var i = 0, correctAns = 0, increment = 0, progressBar = 0;
     $("#over").hide();
     
     function putQuestion() {
@@ -39,6 +39,7 @@ $(document).ready(function() {
         success: function (data) {
             qArray = data.response;
             putQuestion();
+            increment = Math.ceil(100.0 / qArray.length);
         },
         error: function (data) {
             alert("up");
@@ -47,17 +48,27 @@ $(document).ready(function() {
     
     // Clicked an answer
     $("#answers").on("click", ".hoverable", function(){
-        var message = "Incorrecto :(";
         if (checkIfCorrect($(this).attr("id"))) {
             correctAns += 1;
-            message = "Correcto!";
-        }
-        alert(message);
-        
-        if (i < qArray.length) {
-            putQuestion();
+            swal("Oops...", "Respuesta incorrecta :(", "error");
         }
         else {
+            swal("¡Buen trabajo!", "¡Escogiste la respuesta correcta!", "success")
+        }
+        
+        if (i < qArray.length) {
+            // There are questions left
+            $("#question").addClass('animated fadeOutRight').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
+                if (i < qArray.length) {
+                    putQuestion();
+                    var $this = $("#question");
+                    $this.removeClass('animated fadeOutRight');
+                    $("#question").addClass('animated fadeInLeft');
+                }
+            });
+        }
+        else {
+            // we finished the quiz
             var message = " respuestas correctas de ";
             if (correctAns == 1)
                 message = " respuesta correcta de "
@@ -67,5 +78,9 @@ $(document).ready(function() {
             $("#over").show();
             $("#over").addClass('animated fadeInLeft');
         }
+        
+        // Increasing progress bar
+        progressBar += increment;
+        $(".determinate").css("width", progressBar + "%");        
     });
 });

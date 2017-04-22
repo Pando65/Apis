@@ -33,7 +33,7 @@ body {
 }
 
 #exploreBtn, #learnBtn, #evaluateBtn, .container {
-    -webkit-animation-duration: .8s;
+    -webkit-animation-duration: .5s;
     -webkit-animation-delay: 0s;
 }
 
