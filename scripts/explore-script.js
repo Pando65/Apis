@@ -20,7 +20,7 @@ function transparencia() {
 }
 
 function handleDragEnter(e) {
-    
+    $('img', this).css('border', '2px dashed #000');
 }
 
 function handleDragOver(e) {
@@ -32,7 +32,7 @@ function handleDragOver(e) {
 }
 
 function handleDragLeave(e) {
-    
+    $('img', this).css('border', '0px dashed #000');
 }
 
 function handleDragEnd() {
@@ -56,6 +56,7 @@ function handleDrop(e) {
 
 	$("#chain1 img").css({'box-shadow' : 'none'}); // Quita el sombreado de todos los demas, en caso de querer tener varios activos comentar esta linea
 	$('img', this).css('box-shadow', '0px 0px 4px 2px rgba(0, 140, 186, 0.5)'); // Sombreado azul
+    $('img', this).css('border', '0px dashed #000');
 	
 	var idSpanImg = $(this).attr('id');
 	var indexSpanImg = idSpanImg.split('c')[1]; // Obtiene el numero del id que es el index
