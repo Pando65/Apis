@@ -43,3 +43,9 @@ body {
 .collapsible-body {
   background-color: white;
 }
+
+.card-image img {
+    height: auto; 
+    width: auto; 
+    max-height: 180px;
+}
