@@ -47,5 +47,14 @@ body {
 .card-image img {
     height: auto; 
     width: auto; 
-    max-height: 180px;
+    max-height: 100px;
+}
+
+#producto-imagen {
+	max-width: 300px;
+	box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.6);
+}
+
+#hidrogeno {
+	max-height: 80px;
 }

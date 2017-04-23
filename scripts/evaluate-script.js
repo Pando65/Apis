@@ -55,10 +55,10 @@ $(document).ready(function() {
     $("#answers").on("click", ".hoverable", function(){
         if (checkIfCorrect($(this).attr("id"))) {
             correctAns += 1;
-            swal("Oops...", "Respuesta incorrecta :(", "error");
+			swal("¡Buen trabajo!", "¡Escogiste la respuesta correcta!", "success")
         }
         else {
-            swal("¡Buen trabajo!", "¡Escogiste la respuesta correcta!", "success")
+            swal("Oops...", "Respuesta incorrecta :(", "error");
         }
         
         if (i < qArray.length) {
