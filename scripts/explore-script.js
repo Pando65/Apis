@@ -50,12 +50,13 @@ function handleDragEnd() {
 }
 
 function handleDrop(e) {
+	if (e.stopPropagation) {
+		e.stopPropagation(); // stops the browser from redirecting.
+	}
+
 	var boxShadowImg = $('img', this).css("box-shadow");
 	
 	if (boxShadowImg != "rgba(0, 140, 186, 0.498039) 0px 0px 4px 2px" && boxShadowImg != "rgba(0, 140, 186, 0.5) 0px 0px 4px 2px" ) {
-		if (e.stopPropagation) {
-			e.stopPropagation(); // stops the browser from redirecting.
-		}
 
 		$("#chain1 img").css({'box-shadow' : 'none'}); // Quita el sombreado de todos los demas, en caso de querer tener varios activos comentar esta linea
 		$('img', this).css('box-shadow', '0px 0px 4px 2px rgba(0, 140, 186, 0.5)'); // Sombreado azul
@@ -74,8 +75,8 @@ function handleDrop(e) {
 		// Carga las imagenes de ejemplo y el contenido del texto
 		cargaImagenEjemplo();
 
-		return false;
 	}
+	return false;
 }
 
 // Cambia de enlace doble a simple y viceversa.
