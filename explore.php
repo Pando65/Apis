@@ -43,7 +43,7 @@
 		
     </div>
 	<br>
-    <div id="moleculas" class="center-align animated fadeInLeft">
+    <div id="moleculas" class="container center-align animated fadeInLeft">
         <img id="hidrogeno" draggable="true" src="images/hidrogeno.png">
     </div>
 	<br>
