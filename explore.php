@@ -20,17 +20,48 @@
         clear:both;
     }
     </style>
-    <div id="contenedor" draggable="true" class="container center-align animated fadeInLeft">
-        <h2>Hidrogeniza las estructuras</h2>
+
+    <div id="contenedor" class="container center-align animated fadeInLeft">
+        <h4>Hidrogeniza las estructuras</h4>
     </div>
+	<div class="divider"></div>
     <br>
     <div id="chain1" class="container center-align animated fadeInLeft">
-        <span class="carbonos" id="c0"><img src="images/hidrogenado1.png"></span>
-        <span class="carbonos" id="c1"><img src="images/hidrogenado2.png"></span>
-        <span class="carbonos" id="c2"><img src="images/sinhidrogenar1.png"></span>
-        <span class="carbonos" id="c3"><img src="images/sinhidrogenar2.png"></span>
+		<span><img src="images/explora/p1_cadena.png"></span>
+       
+		<span class="dobleEnlace" id="d0"><img src="images/explora/p2y6_doble.png"></span>
+		
+        <span><img src="images/explora/p3y7_cadena.png"></span>
+        
+		<span class="dobleEnlace" id="d1"><img src="images/explora/p4_doble.png"></span>
+		
+        <span><img src="images/explora/p5_cadena.png"></span>
+		
+		<span class="dobleEnlace" id="d2"><img src="images/explora/p2y6_doble.png"></span>
+		
+		<span><img src="images/explora/p3y7_cadena.png"></span>
+		
     </div>
-    <div id="moleculas" class="left-align animated fadeInLeft" draggable="true">
-        <span id="atomos"><img id="hidrogeno" src="images/hidrogeno.png" style="width: 15%; height: 20%"></span>
+	<br>
+    <div id="moleculas" class="center-align animated fadeInLeft">
+        <img id="hidrogeno" draggable="true" src="images/hidrogeno.png">
     </div>
+	<br>
+	
+	<div class="container center-align animated fadeInLeft">
+		<div class="card">
+			<div class= "card-content center-align">
+				<div>
+					<img class="responsive-img" id="producto-imagen" src="">
+				</div>
+				<br>
+				<span id="producto-titulo" class="card-title"></span>
+				<div class="divider"></div>
+				<br>
+				<span id="contenido-producto"></span>
+			</div>
+		</div>
+	</div>
+	<br>
+	<br>
 </body>
