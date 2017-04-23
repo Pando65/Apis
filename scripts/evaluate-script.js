@@ -1,7 +1,7 @@
 $(document).ready(function() {
     
     var qArray;
-    var i = 0, correctAns = 0, increment = 0, progressBar = 0;
+    var i = 0, correctAns = 0, increment = 0, progressBar = 0, parche = 0;
     $("#over").hide();
     
     function putQuestion() {
@@ -10,9 +10,14 @@ $(document).ready(function() {
         for(var c = 0; c < qArray[i].ans.length ; c += 1) {
             currentHTML += "<div class='row'>";
                 currentHTML += "<div class='card col s12 hoverable' id='" + qArray[i].ans[c].id + "'>";
-                    currentHTML += "<div class='card-image'></div>";
+                    if (qArray[i].ans[c].answer_img != null) {
+                        currentHTML += "<div class='card-image'>"
+                            currentHTML += "<img src='images/" + qArray[i].ans[c].answer_img + "'/>";
+                        currentHTML += "</div>";
+                    }
                     currentHTML += "<div class='card-content'>"
-                        currentHTML += qArray[i].ans[c].answer_text;
+                        if (qArray[i].ans[c].answer_text != null)
+                            currentHTML += qArray[i].ans[c].answer_text;
                     currentHTML += "</div>";
                 currentHTML += "</div>";
             currentHTML += "</div>";
@@ -58,13 +63,16 @@ $(document).ready(function() {
         
         if (i < qArray.length) {
             // There are questions left
+            
+            // Este metodo se ejecuta 2 veces y deberia ser una vez
             $("#question").addClass('animated fadeOutRight').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
-                if (i < qArray.length) {
+                if (parche % 2 == 0) { 
                     putQuestion();
                     var $this = $("#question");
                     $this.removeClass('animated fadeOutRight');
-                    $("#question").addClass('animated fadeInLeft');
+                    $("#question").addClass('animated fadeInLeft'); //creo que es porque al finalizar esta animacion tambien se ejecuta el callback
                 }
+                parche += 1; //por eso ocupo esta variable, para que solo se ejecute las veces pares
             });
         }
         else {
