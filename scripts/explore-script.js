@@ -20,7 +20,12 @@ function transparencia() {
 }
 
 function handleDragEnter(e) {
-    $('img', this).css('border', '2px dashed #000');
+	// Agrega delineado sobre solamente los SI activos
+	console.log($('img', this).css("box-shadow"));
+	console.log(" - ");
+	if ($('img', this).css("box-shadow") == "rgba(144, 214, 128) 0px 0px 4px 3px") {
+    	$('img', this).css('border', '2px dashed #000');
+	}
 }
 
 function handleDragOver(e) {
@@ -58,7 +63,6 @@ function handleDrop(e) {
 	
 	if (boxShadowImg != "rgba(0, 140, 186, 0.498039) 0px 0px 4px 2px" && boxShadowImg != "rgba(0, 140, 186, 0.5) 0px 0px 4px 2px" ) {
 
-		$("#chain1 img").css({'box-shadow' : 'none'}); // Quita el sombreado de todos los demas, en caso de querer tener varios activos comentar esta linea
 		$('img', this).css('box-shadow', '0px 0px 4px 2px rgba(0, 140, 186, 0.5)'); // Sombreado azul
 		$('img', this).css('border', '0px dashed #000');
 
