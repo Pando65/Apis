@@ -23,7 +23,7 @@ function handleDragEnter(e) {
 	// Agrega delineado sobre solamente los SI activos
 	console.log($('img', this).css("box-shadow"));
 	console.log(" - ");
-	if ($('img', this).css("box-shadow") == "rgba(144, 214, 128) 0px 0px 4px 3px") {
+	if ($('img', this).css("box-shadow") != "rgba(0, 140, 186, 0.498039) 0px 0px 4px 2px" && $('img', this).css("box-shadow") != "rgba(0, 140, 186, 0.5) 0px 0px 4px 2px") {
     	$('img', this).css('border', '2px dashed #000');
 	}
 }
