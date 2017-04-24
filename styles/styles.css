@@ -47,7 +47,9 @@ body {
 .card-image img {
     height: auto; 
     width: auto; 
-    max-height: 200px;
+    max-height: 100px;
+	min-height: 100px;
+	max-width: 400px;
 }
 
 #producto-imagen {
@@ -57,4 +59,10 @@ body {
 
 #hidrogeno {
 	max-height: 80px;
+}
+
+.fierro {
+	display: block;
+    margin-left: auto;
+    margin-right: auto	
 }

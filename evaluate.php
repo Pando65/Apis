@@ -14,7 +14,7 @@ include "header.php";
                 <span class="card-title">¿Qué son los acidos grasos?</span>
                 <div class="divider"></div>
                 <br>
-                <div id="answers"></div>             
+                <div id="answers" class="container center-align"></div>             
             </div>
         </div>
         

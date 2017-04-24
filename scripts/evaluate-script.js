@@ -9,13 +9,13 @@ $(document).ready(function() {
         $(".card-title").html(qArray[i].question_text);
         for(var c = 0; c < qArray[i].ans.length ; c += 1) {
             currentHTML += "<div class='row'>";
-                currentHTML += "<div class='card col s12 hoverable' id='" + qArray[i].ans[c].id + "'>";
+                currentHTML += "<div class='card col s12 hoverable center-block' id='" + qArray[i].ans[c].id + "'>";
                     if (qArray[i].ans[c].answer_img != null) {
-                        currentHTML += "<div class='card-image'>"
-                            currentHTML += "<img src='images/" + qArray[i].ans[c].answer_img + "'/>";
+                        currentHTML += "<div class='card-image center-block'>"
+                            currentHTML += "<img class='fierro' src='images/" + qArray[i].ans[c].answer_img + "'/>";
                         currentHTML += "</div>";
                     }
-                    currentHTML += "<div class='card-content'>"
+                    currentHTML += "<div class='card-content center-block'>"
                         if (qArray[i].ans[c].answer_text != null)
                             currentHTML += qArray[i].ans[c].answer_text;
                     currentHTML += "</div>";
