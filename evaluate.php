@@ -20,7 +20,7 @@ include "header.php";
         
         <div id="over" class="">
             <h3>¡Has terminado!</h3> <br>
-            <h4>Tu puntaje: <span id="score"></span></h4> <br>
+            <h4>Tu puntaje: <span id="score-obt"></span><span id="score"></span><span id="score-tot"></span> totales</h4> <br>
             <h4>¡Sigue practicando!</h4>
         </div>
     </div>
