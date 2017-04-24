@@ -12,7 +12,7 @@ $(document).ready(function() {
                 currentHTML += "<div class='card col s12 hoverable center-block' id='" + qArray[i].ans[c].id + "'>";
                     if (qArray[i].ans[c].answer_img != null) {
                         currentHTML += "<div class='card-image center-block'>"
-                            currentHTML += "<img class='fierro' src='images/" + qArray[i].ans[c].answer_img + "'/>";
+                            currentHTML += "<img class='center-imagen' src='images/" + qArray[i].ans[c].answer_img + "'/>";
                         currentHTML += "</div>";
                     }
                     currentHTML += "<div class='card-content center-block'>"
