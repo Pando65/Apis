@@ -22,7 +22,7 @@
     </style>
 
     <div id="contenedor" class="container center-align animated fadeInLeft">
-        <h4>Hidrogeniza las estructuras</h4>
+        <h4>Hidrogena las estructuras</h4>
     </div>
 	<div class="divider"></div>
     <br>
