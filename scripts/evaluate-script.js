@@ -1,7 +1,7 @@
 $(document).ready(function() {
     
     var qArray;
-    var i = 0, correctAns = 0, increment = 0, progressBar = 0, parche = 0;
+    var i = 0, correctAns = 0, increment = 0, progressBar = 0, parche = 0, clickedEnabled = true;
     $("#over").hide();
     
     function putQuestion() {
@@ -53,44 +53,51 @@ $(document).ready(function() {
     
     // Clicked an answer
     $("#answers").on("click", ".hoverable", function(){
-        if (checkIfCorrect($(this).attr("id"))) {
-            correctAns += 1;
-			swal("¡Buen trabajo!", "¡Escogiste la respuesta correcta!", "success")
+        if (clickedEnabled) {
+            clickedEnabled = false;
+            if (checkIfCorrect($(this).attr("id"))) {
+                correctAns += 1;
+                swal("¡Buen trabajo!", "¡Escogiste la respuesta correcta!", "success")
+            }
+            else {
+                swal("Oops...", "Respuesta incorrecta :(", "error");
+            }
+
+            if (i < qArray.length) {
+                // There are questions left
+
+                // Este metodo se ejecuta 2 veces y deberia ser una vez
+                $("#question").addClass('animated fadeOutRight').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
+                    if (parche % 2 == 0) { 
+                        putQuestion();
+                        var $this = $("#question");
+                        $this.removeClass('animated fadeOutRight');
+                        $("#question").addClass('animated fadeInLeft'); //creo que es porque al finalizar esta animacion tambien se ejecuta el callback
+                    }
+                    parche += 1; //por eso ocupo esta variable, para que solo se ejecute las veces pares
+                });
+            }
+            else {
+                // we finished the quiz
+                var message = " respuestas correctas de ";
+                if (correctAns == 1)
+                    message = " respuesta correcta de "
+                $("#question").addClass('animated fadeOutRight');
+                $("#question").hide();
+                $("#score-obt").html(correctAns);
+                $("#score").html(message);
+                $("#score-tot").html(qArray.length);
+                $("#over").show();
+                $("#over").addClass('animated fadeInLeft');
+            }
+
+            // Increasing progress bar
+            progressBar += increment;
+            $(".determinate").css("width", progressBar + "%");            
         }
         else {
-            swal("Oops...", "Respuesta incorrecta :(", "error");
+            clickedEnabled = true;
         }
         
-        if (i < qArray.length) {
-            // There are questions left
-            
-            // Este metodo se ejecuta 2 veces y deberia ser una vez
-            $("#question").addClass('animated fadeOutRight').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
-                if (parche % 2 == 0) { 
-                    putQuestion();
-                    var $this = $("#question");
-                    $this.removeClass('animated fadeOutRight');
-                    $("#question").addClass('animated fadeInLeft'); //creo que es porque al finalizar esta animacion tambien se ejecuta el callback
-                }
-                parche += 1; //por eso ocupo esta variable, para que solo se ejecute las veces pares
-            });
-        }
-        else {
-            // we finished the quiz
-            var message = " respuestas correctas de ";
-            if (correctAns == 1)
-                message = " respuesta correcta de "
-            $("#question").addClass('animated fadeOutRight');
-            $("#question").hide();
-            $("#score-obt").html(correctAns);
-			$("#score").html(message);
-			$("#score-tot").html(qArray.length);
-            $("#over").show();
-            $("#over").addClass('animated fadeInLeft');
-        }
-        
-        // Increasing progress bar
-        progressBar += increment;
-        $(".determinate").css("width", progressBar + "%");        
     });
 });
