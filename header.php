@@ -66,7 +66,6 @@
                   <li><a href="learn.php">Aprende</a></li>
                   <li><a href="explore.php">Explora</a></li>
                   <li><a href="evaluate.php">Evalua</a></li>
-                  <li><a href="team.php">Equipo</a></li>
           <?php
           }
           else if ($page === 'evaluate') {
@@ -74,7 +73,6 @@
                   <li><a href="learn.php">Aprende</a></li>
                   <li><a href="explore.php">Explora</a></li>
                   <li class="active"><a href="evaluate.php">Evalua</a></li>
-                  <li><a href="team.php">Equipo</a></li>
           <?php
           }
           else if ($page === 'explore') {
@@ -82,7 +80,6 @@
                   <li><a href="learn.php">Aprende</a></li>
                   <li class="active"><a href="explore.php">Explora</a></li>
                   <li><a href="evaluate.php">Evalua</a></li>
-                  <li><a href="team.php">Equipo</a></li>
           <?php
           }
           else if ($page === 'learn') {
@@ -90,7 +87,6 @@
                   <li class="active"><a href="learn.php">Aprende</a></li>
                   <li><a href="explore.php">Explora</a></li>
                   <li><a href="evaluate.php">Evalua</a></li>
-                  <li><a href="team.php">Equipo</a></li>
           <?php
           }
           else if ($page === 'team') {
@@ -98,7 +94,6 @@
                   <li><a href="learn.php">Aprende</a></li>
                   <li><a href="explore.php">Explora</a></li>
                   <li><a href="evaluate.php">Evalua</a></li>
-                  <li class="active"><a href="team.php">Equipo</a></li>
           <?php
           }
           ?>
