@@ -58,7 +58,7 @@
   <div class="navbar-fixed">
       <nav>
           <div class="nav-wrapper teal darken-2">
-              <a href="index.php" class="brand-logo">Proyecto Quimica</a>
+              <a href="index.php" class="brand-logo">Reacciones de Hidrograsas</a>
               <ul id="nav-mobile" class="right hide-on-med-and-down">
           <?php
           if ($page === 'index') {
