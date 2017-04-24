@@ -14,13 +14,13 @@ include "header.php";
                 <span class="card-title">¿Qué son los acidos grasos?</span>
                 <div class="divider"></div>
                 <br>
-                <div id="answers"></div>             
+                <div id="answers" class="container center-align"></div>             
             </div>
         </div>
         
         <div id="over" class="">
             <h3>¡Has terminado!</h3> <br>
-            <h4>Tu puntaje: <span id="score"></span></h4> <br>
+            <h4>Tu puntaje: <span id="score-obt"></span><span id="score"></span><span id="score-tot"></span> totales</h4> <br>
             <h4>¡Sigue practicando!</h4>
         </div>
     </div>

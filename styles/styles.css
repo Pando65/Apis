@@ -48,7 +48,12 @@ body {
     height: auto; 
     width: auto; 
     max-height: 100px;
+<<<<<<< HEAD
     max-width: 100px;
+=======
+	min-height: 100px;
+	max-width: 400px;
+>>>>>>> ee40d8a67680ce74bfa53d093aa0fbdb775726bf
 }
 
 #producto-imagen {
@@ -60,8 +65,23 @@ body {
 	max-height: 80px;
 }
 
+<<<<<<< HEAD
 .center-imagen {
     display: block;
     margin-left: auto;
     margin-right: auto;
+=======
+.fierro {
+	display: block;
+    margin-left: auto;
+    margin-right: auto	
+}
+
+#score-obt {
+	color: green;
+}
+
+#score-tot {
+	color: blue;
+>>>>>>> ee40d8a67680ce74bfa53d093aa0fbdb775726bf
 }

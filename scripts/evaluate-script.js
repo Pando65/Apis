@@ -1,7 +1,7 @@
 $(document).ready(function() {
     
     var qArray;
-    var i = 0, correctAns = 0, increment = 0, progressBar = 0, parche = 0, clickEnabled = true;
+    var i = 0, correctAns = 0, increment = 0, progressBar = 0, parche = 0;
     $("#over").hide();
     
     function putQuestion() {
@@ -9,13 +9,13 @@ $(document).ready(function() {
         $(".card-title").html(qArray[i].question_text);
         for(var c = 0; c < qArray[i].ans.length ; c += 1) {
             currentHTML += "<div class='row'>";
-                currentHTML += "<div class='card col s12 hoverable' id='" + qArray[i].ans[c].id + "'>";
+                currentHTML += "<div class='card col s12 hoverable center-block' id='" + qArray[i].ans[c].id + "'>";
                     if (qArray[i].ans[c].answer_img != null) {
-                        currentHTML += "<div class='card-image'>"
-                            currentHTML += "<img src='images/" + qArray[i].ans[c].answer_img + "'/>";
+                        currentHTML += "<div class='card-image center-block'>"
+                            currentHTML += "<img class='fierro' src='images/" + qArray[i].ans[c].answer_img + "'/>";
                         currentHTML += "</div>";
                     }
-                    currentHTML += "<div class='card-content'>"
+                    currentHTML += "<div class='card-content center-block'>"
                         if (qArray[i].ans[c].answer_text != null)
                             currentHTML += qArray[i].ans[c].answer_text;
                     currentHTML += "</div>";
@@ -53,49 +53,44 @@ $(document).ready(function() {
     
     // Clicked an answer
     $("#answers").on("click", ".hoverable", function(){
-        if (clickEnabled) {
-            if (checkIfCorrect($(this).attr("id"))) {
-                correctAns += 1;
-                swal("¡Buen trabajo!", "¡Escogiste la respuesta correcta!", "success")
-            }
-            else {
-                swal("Oops...", "Respuesta incorrecta :(", "error");
-            }
-
-            if (i < qArray.length) {
-                // There are questions left
-
-                // Este metodo se ejecuta 2 veces y deberia ser una vez
-                $("#question").addClass('animated fadeOutRight').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
-                    if (parche % 2 == 0) {
-                        clickEnabled = false;
-                        putQuestion();
-                        var $this = $("#question");
-                        $this.removeClass('animated fadeOutRight');
-                        $("#question").addClass('animated fadeInLeft'); //creo que es porque al finalizar esta animacion tambien se ejecuta el callback
-                    }
-                    else {
-                        clickEnabled = true;
-                    }
-                    parche += 1; //por eso ocupo esta variable, para que solo se ejecute las veces pares
-                });
-            }
-            else {
-                // we finished the quiz
-                var message = " respuestas correctas de ";
-                if (correctAns == 1)
-                    message = " respuesta correcta de "
-                $("#question").addClass('animated fadeOutRight');
-                $("#question").hide();
-                $("#score").html(correctAns + message + qArray.length + " totales");
-                $("#over").show();
-                $("#over").addClass('animated fadeInLeft');
-            }
-
-            // Increasing progress bar
-            progressBar += increment;
-            $(".determinate").css("width", progressBar + "%");               
+        if (checkIfCorrect($(this).attr("id"))) {
+            correctAns += 1;
+			swal("¡Buen trabajo!", "¡Escogiste la respuesta correcta!", "success")
         }
-     
+        else {
+            swal("Oops...", "Respuesta incorrecta :(", "error");
+        }
+        
+        if (i < qArray.length) {
+            // There are questions left
+            
+            // Este metodo se ejecuta 2 veces y deberia ser una vez
+            $("#question").addClass('animated fadeOutRight').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
+                if (parche % 2 == 0) { 
+                    putQuestion();
+                    var $this = $("#question");
+                    $this.removeClass('animated fadeOutRight');
+                    $("#question").addClass('animated fadeInLeft'); //creo que es porque al finalizar esta animacion tambien se ejecuta el callback
+                }
+                parche += 1; //por eso ocupo esta variable, para que solo se ejecute las veces pares
+            });
+        }
+        else {
+            // we finished the quiz
+            var message = " respuestas correctas de ";
+            if (correctAns == 1)
+                message = " respuesta correcta de "
+            $("#question").addClass('animated fadeOutRight');
+            $("#question").hide();
+            $("#score-obt").html(correctAns);
+			$("#score").html(message);
+			$("#score-tot").html(qArray.length);
+            $("#over").show();
+            $("#over").addClass('animated fadeInLeft');
+        }
+        
+        // Increasing progress bar
+        progressBar += increment;
+        $(".determinate").css("width", progressBar + "%");        
     });
 });
